@@ -877,13 +877,13 @@ function show() {
             }
         })
         .filter(item => {
-            const markaMatch = markaSelect.value === "" || item.brand.includes(markaSelect.value);
-            const modelMatch = modelSelect.value === "" || item.model.includes(modelSelect.value);
-            const cityMatch = citySelect.value === "" || item.city.includes(citySelect.value);
-            const banTypeMatch = banSelect.value === "" || item.banType.includes(banSelect.value);
-            const currencyMatch = currencySelect.value === "" || item.currency.includes(currencySelect.value);
+            const markaSec= markaSelect.value === "" || item.brand.includes(markaSelect.value);
+            const modelSec = modelSelect.value === "" || item.model.includes(modelSelect.value);
+            const citySec = citySelect.value === "" || item.city.includes(citySelect.value);
+            const banTypeSec = banSelect.value === "" || item.banType.includes(banSelect.value);
+            const currencySec = currencySelect.value === "" || item.currency.includes(currencySelect.value);
  
-            return markaMatch && modelMatch && cityMatch && banTypeMatch && currencyMatch;
+            return markaSec && modelSec && citySec && banTypeSec && currencySec;
         })
         .map(item => {
             cards.innerHTML += `<article data-aos="zoom-in-up">
